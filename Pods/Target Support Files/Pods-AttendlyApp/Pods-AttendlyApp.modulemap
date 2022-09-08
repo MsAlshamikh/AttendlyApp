@@ -1,0 +1,6 @@
+framework module Pods_AttendlyApp {
+  umbrella header "Pods-AttendlyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
