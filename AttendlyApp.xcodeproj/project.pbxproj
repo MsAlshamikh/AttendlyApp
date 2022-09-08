@@ -13,6 +13,8 @@
 		3494582B28CA477C003383CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582928CA477C003383CF /* Main.storyboard */; };
 		3494582D28CA477D003383CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3494582C28CA477D003383CF /* Assets.xcassets */; };
 		3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582E28CA477D003383CF /* LaunchScreen.storyboard */; };
+		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
+		AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		3494582C28CA477D003383CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3494582F28CA477D003383CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3494583128CA477D003383CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3494583728CA490C003383CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3494582228CA477C003383CF /* AttendlyApp */,
 				3494582128CA477C003383CF /* Products */,
+				455C1F2D487DF25DE9A96CC9 /* Pods */,
+				6D55AA1370B5EC383FF1EC00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,27 @@
 				3494582C28CA477D003383CF /* Assets.xcassets */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
 				3494583128CA477D003383CF /* Info.plist */,
+				3494583728CA490C003383CF /* GoogleService-Info.plist */,
 			);
 			path = AttendlyApp;
+			sourceTree = "<group>";
+		};
+		455C1F2D487DF25DE9A96CC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */,
+				F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D55AA1370B5EC383FF1EC00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3494583428CA477D003383CF /* Build configuration list for PBXNativeTarget "AttendlyApp" */;
 			buildPhases = (
+				B10A7DA1C941B4AF560B0223 /* [CP] Check Pods Manifest.lock */,
 				3494581C28CA477C003383CF /* Sources */,
 				3494581D28CA477C003383CF /* Frameworks */,
 				3494581E28CA477C003383CF /* Resources */,
+				FBD72AAFD4AB3BC7F2CE149F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */,
+				3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */,
 				3494582D28CA477D003383CF /* Assets.xcassets in Resources */,
 				3494582B28CA477C003383CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B10A7DA1C941B4AF560B0223 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AttendlyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBD72AAFD4AB3BC7F2CE149F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3494581C28CA477C003383CF /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		3494583528CA477D003383CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +384,7 @@
 		};
 		3494583628CA477D003383CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
