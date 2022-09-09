@@ -83,7 +83,6 @@
 				BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */,
 				F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
