@@ -51,6 +51,8 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     var nfcSession: NFCNDEFReaderSession?
     var type="None"
+    @IBAction func RreadNFC(_ sender: Any) {
+    }
     @IBAction func ScanBtn (_sender:Any){//check in botton
         nfcSession = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: true)
         nfcSession?.begin()

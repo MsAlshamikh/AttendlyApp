@@ -37,12 +37,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-aG-Vqy">
-                                <rect key="frame" x="91" y="354" width="222" height="209"/>
+                                <rect key="frame" x="96" y="352" width="222" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49169021839999999" green="0.80083245039999995" blue="0.6067305207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="CHECK IN"/>
+                                <connections>
+                                    <action selector="RreadNFC:" destination="TEt-tq-TFK" eventType="touchUpInside" id="DMQ-1F-9Os"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5d9-ft-0uz"/>
@@ -52,6 +55,7 @@
                     <tabBarItem key="tabBarItem" title="Check In" image="checkmark.diamond.fill" catalog="system" id="9P1-LI-2TF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltZ-dY-1CM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TEt-tq-TFK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="779.71014492753625" y="71.651785714285708"/>
         </scene>
@@ -75,7 +79,7 @@
         <!--Statistics-->
         <scene sceneID="b7V-2a-b4O">
             <objects>
-                <viewController id="FNC-ZO-BmB" customClass="ViewController" customModule="bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FNC-ZO-BmB" customClass="ViewController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BRz-a9-iAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
