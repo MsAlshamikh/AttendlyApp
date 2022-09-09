@@ -371,7 +371,7 @@
 				CODE_SIGN_ENTITLEMENTS = AttendlyApp/AttendlyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K9TPRSV2Z7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,7 +401,7 @@
 				CODE_SIGN_ENTITLEMENTS = AttendlyApp/AttendlyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K9TPRSV2Z7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
