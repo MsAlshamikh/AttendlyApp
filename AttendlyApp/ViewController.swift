@@ -23,7 +23,18 @@ class ViewController: UIViewController {
     func loadStats(){
       
         let db = Firestore.firestore()
-        db.collection("Unistudent").addDocument(data: ["advisorID": "441111111", "major" :"SWE","sFirstN":"Amani","sLastN":"Aldahmash","studentID":"441204066"])
+        db.collection("Unistudent").getDocuments{ (querySnapshot,error) in
+            if let er = error {
+            print("FAAAAAIIIIILLLL \(er)")}
+            else{
+                if let snapshot = querySnapshot?.documents {
+                    for doc in snapshot{
+                            print(doc.data())
+                }
+                
+            }
+            }}}
+      /*  db.collection("Unistudent").addDocument(data: ["advisorID": "441111111", "major" :"SWE","sFirstN":"Amani","sLastN":"Aldahmash","studentID":"441204066"])
         {error in
             if let error = error {
                 print("FAAAAAIIIIILLLL \(error)")
@@ -31,14 +42,7 @@ class ViewController: UIViewController {
             else{
                 print("YESSSSSSSSSSS")
             }
-        }}}
-
-
-/*
-    func post(){
-        let db = Firestore.firestore()
-        db.collection("Unistudent").document("jhkPjKIZ4mj9ZisvgjFb")
-        //.getDocument()
-        
-    }*/
-
+        }
+       */
+  
+}
