@@ -31,6 +31,7 @@
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FAD1AF28CB81E500C623CC /* dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataset.swift; sourceTree = "<group>"; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F03FB8FF28CB925400F66CBF /* AttendlyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AttendlyApp.entitlements; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +68,7 @@
 		3494582228CA477C003383CF /* AttendlyApp */ = {
 			isa = PBXGroup;
 			children = (
+				F03FB8FF28CB925400F66CBF /* AttendlyApp.entitlements */,
 				3494582328CA477C003383CF /* AppDelegate.swift */,
 				3494582528CA477C003383CF /* SceneDelegate.swift */,
 				3494582728CA477C003383CF /* ViewController.swift */,
@@ -366,9 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AttendlyApp/AttendlyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NM26W3U2D9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -395,9 +398,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AttendlyApp/AttendlyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NM26W3U2D9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
