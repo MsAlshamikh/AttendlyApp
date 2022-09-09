@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     func loadStats(){
       
         let db = Firestore.firestore()
-        db.collection("Unistudent").getDocuments{ (querySnapshot,error) in
+        db.collection("Unistudent").getDocuments{ querySnapshot,error in
             if let er = error {
             print("FAAAAAIIIIILLLL \(er)")}
             else{
