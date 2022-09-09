@@ -14,6 +14,7 @@
 		3494582D28CA477D003383CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3494582C28CA477D003383CF /* Assets.xcassets */; };
 		3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582E28CA477D003383CF /* LaunchScreen.storyboard */; };
 		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
+		A2FAD1B028CB81E500C623CC /* dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FAD1AF28CB81E500C623CC /* dataset.swift */; };
 		AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		3494583128CA477D003383CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3494583728CA490C003383CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2FAD1AF28CB81E500C623CC /* dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataset.swift; sourceTree = "<group>"; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				3494582328CA477C003383CF /* AppDelegate.swift */,
 				3494582528CA477C003383CF /* SceneDelegate.swift */,
 				3494582728CA477C003383CF /* ViewController.swift */,
+				A2FAD1AF28CB81E500C623CC /* dataset.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			files = (
 				3494582828CA477C003383CF /* ViewController.swift in Sources */,
 				3494582428CA477C003383CF /* AppDelegate.swift in Sources */,
+				A2FAD1B028CB81E500C623CC /* dataset.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
