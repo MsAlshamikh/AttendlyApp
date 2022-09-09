@@ -67,15 +67,15 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     
     
-    /*func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         var result = ""
-        for payload in messages[0].records{
+        for payload in messages[0].records{ //,message saved in nfc tag
             result += String.init(data: payload.payload.advanced(by: 3), encoding: .utf8) ?? "Formate not supported"
         }
         DispatchQueue.main.async {
             self.NFCText.text = result
         }
-    }*/
+    }
     
     
 }
