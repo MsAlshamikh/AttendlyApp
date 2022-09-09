@@ -31,7 +31,7 @@
         <!--Check In-->
         <scene sceneID="HBI-dG-PY2">
             <objects>
-                <viewController id="ft5-DV-bEv" sceneMemberID="viewController">
+                <viewController id="ft5-DV-bEv" customClass="ViewController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DN-I3-gjI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,20 @@
                                 <buttonConfiguration key="configuration" style="plain" title="CHECK IN"/>
                                 <connections>
                                     <action selector="RreadNFC:" destination="TEt-tq-TFK" eventType="touchUpInside" id="DMQ-1F-9Os"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="794-pO-Bjv">
+                                <rect key="frame" x="96" y="352" width="222" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49169021839999999" green="0.80083245039999995" blue="0.6067305207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CHECK IN"/>
+                                <connections>
+                                    <action selector="RreadNFC:" destination="TEt-tq-TFK" eventType="touchUpInside" id="3BH-En-j9E"/>
+                                    <action selector="ScanBtn:" destination="TEt-tq-TFK" eventType="touchUpInside" id="eO9-G1-G8j"/>
+                                    <action selector="ScanBtn:" destination="ft5-DV-bEv" eventType="touchUpInside" id="n7E-ch-xoO"/>
+                                    <action selector="scan:" destination="TEt-tq-TFK" eventType="touchUpInside" id="rwg-cv-jMl"/>
                                 </connections>
                             </button>
                         </subviews>
