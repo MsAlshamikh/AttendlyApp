@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import CoreNFC
 
 //import Firebase
 //import FirebaseDatabse
@@ -44,5 +45,13 @@ class ViewController: UIViewController {
             }
         }
        */
+    
+    
+    var nfcsession: NFCNDEFReaderSession?
+    var word="none"
+    @IBAction func ScanBtn (_sender:Any){//check in botton
+        nfcsession
+    }
+    
   
 }

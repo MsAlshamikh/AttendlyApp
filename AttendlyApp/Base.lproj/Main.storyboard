@@ -75,7 +75,7 @@
         <!--Statistics-->
         <scene sceneID="b7V-2a-b4O">
             <objects>
-                <viewController id="FNC-ZO-BmB" customClass="ViewController" customModule="bar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FNC-ZO-BmB" customClass="ViewController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BRz-a9-iAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
