@@ -16,18 +16,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loadStats()}
+        loadStats()
+        
+    }
     
     func loadStats(){
       
         let db = Firestore.firestore()
-        db.collection("Unistudent").addDocument(data: ["name": "Amani", "major" :"SWE"])
-        {(error) in
-            if error != nil{
-                
+        db.collection("Unistudent").addDocument(data: ["advisorID": "441111111", "major" :"SWE","sFirstN":"Amani","sLastN":"Aldahmash","studentID":"441204066"])
+        {error in
+            if let error = error {
+                print("FAAAAAIIIIILLLL \(error)")
             }
             else{
-                
+                print("YESSSSSSSSSSS")
             }
         }}}
 
