@@ -11,88 +11,155 @@ import FirebaseFirestore
 import FirebaseAuth
 //var useremailshare : String = ""
 
+
+
 class loginController: UIViewController {
     
     
     @IBOutlet weak var emailTextfiled: UITextField!
     @IBOutlet weak var passwordTextfiled: UITextField!
     
+    @IBOutlet weak var validationMassege: UILabel!
     
     // @IBOutlet weak var emailError: UILabel!
     //@IBOutlet weak var passError: UILabel!
     
+    @IBOutlet weak var validationMessegepass: UILabel!
     @IBOutlet weak var buttonlogin: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        validationMassege.isHidden = true
+        validationMessegepass.isHidden = true
+        // Do any additional setup after loading the view.
+    }
     
-    
-    // override func viewDidLoad() {
-    //   super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
-    // resetForm()
-    //  }
-    /* func resetForm(){
-     buttonlogin.isEnabled=false
-     emailError.isHidden=false
-     passError.isHidden=false
-     
-     emailError.text="Required"
-     passError.text="Required"
-     
-     emailTextfiled.text=""
-     passwordTextfiled.text=""
-     }*/
     
     
     
     
     @IBAction func loginpressed(_ sender: Any) {
         //  resetForm()
+        validationMassege.isHidden = true
+        validationMessegepass.isHidden = true
+        
         if let email=emailTextfiled.text,let password=passwordTextfiled.text{
+            
+            guard let emailis =  self.emailTextfiled.text, !email.isEmpty else {
+                validationMassege.isHidden = false
+                validationMassege.text = "please Enter your Email"
+                return
+            }
+            if isValidEmail(emailID: emailis) == false {
+                validationMassege.isHidden = false
+                validationMassege.text = "Please enter valid email address"
+            }
+            guard let passw =  self.passwordTextfiled.text, !passw.isEmpty else {
+                validationMessegepass.isHidden = false
+                validationMessegepass.text = "please Enter your password"
+                return
+            }
+            if password.count != 8{
+                validationMessegepass.isHidden = false
+                validationMessegepass.text = "Please enter password with 8  number"
+            }
+            
+            //validationMassege.isHidden = true
+            //  validationMessegepass.isHidden = true
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 //  guard let strongSelf = self else { return }
                 if let e=error{   //if no connect with firebase
+                    //error creating account
+                    let alert = UIAlertController(title: "Error", message: "No Exist User ,try agin", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
                     print(e)
                 }else{   //user Auth in firebase
-               //     self.performSegue(withIdentifier: "LaunchScreen", sender: self)
+                    //     self.performSegue(withIdentifier: "LaunchScreen", sender: self)
                     print("sucsses")
+                    ///
                     self.checkUserExist(emailckeck: email) { exist in
                         if  exist {
-                            print("exist user in Appstudent")
-                       self.performSegue(withIdentifier: "movetoo", sender: self)
+                            print("exist student in Unistudent")
+                            self.performSegue(withIdentifier: "movetoo", sender: self)
                             Global.shared.useremailshare = email
                         }
                         else{
-                            print("not exist in Appstudent")
+                            print("student not exist in Unistudent")
                             self.storeUserInformation()
                         }
-                    }
+                    }   //end checkuserExist(student)
+                    
+                    
+                    self.checklectureExist(emailckeck: email) { exs in
+                        if  exs {
+                            print("exist lecture in Lectures")
+                            // self.performSegue(withIdentifier: "movetoo", sender: self)
+                            Global.shared.useremailshare = email
+                        }
+                        else{
+                            print(" lecture not exist in Lectures")
+                          //  self.storeUserInformation()
+                        }
+                    }   //end checklectureExist
+                    
+                    
                 }}
+        }   //end if
     }
+    
+    //
+    
+    
+    func isValidEmail(emailID:String) -> Bool {
+        //      let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+     //   let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{3,}+\\.[A-Za-z]{2,}"
+        let emailRegEx = "[0-9]+@[A-Za-z]+\\.[A-Za-z]{2,}+\\.[A-Za-z]{3,}+\\.[A-Za-z]{2,}"
+
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: emailID)
     }
+    
+    
     
     
     //end
     
     func checkUserExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
         let db = Firestore.firestore()
-        db.collection("Appstudent").whereField("EmailStudent", isEqualTo:emailckeck).getDocuments { snapshot, error in
+        db.collection("Unistudent").whereField("Emailstudent", isEqualTo:emailckeck).getDocuments { snapshot, error in
             if let error = error {
                 print("failed connection")
             }
             if let snapshot=snapshot {
                 if snapshot.count==0{
-                    
+                    //no student
                     callback(false) }
                 else{
+              //      there student
                     callback(true)
                 }
             }
-            
-            
         }
+    }
+    func checklectureExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
+        let db = Firestore.firestore()
+        db.collection("Lectures").whereField("EmailLectures", isEqualTo:emailckeck).getDocuments { snapshot, error in
+            if let error = error {
+                print("failed connection")
+            }
+            if let snapshot=snapshot {
+                if snapshot.count==0{
+                    //no lecture in Lectures
+                    callback(false) }
+                else{
+                    //   there lecture in Lectures
+                    callback(true)
+                }
+            }
         }
-        
+    }
     
     
     
@@ -117,65 +184,6 @@ class loginController: UIViewController {
             }
         }
     }  //end func
-    
-    
-    
-    
-    /*  if  let emstore=emailTextfiled.text,let passtore=passwordTextfiled.text{
-     guard let uid=Auth.auth().currentUser?.uid else {return }
-     let userData = ["Email":self.emstore ,"passw":passtore,"uid":uid]
-     Firestore.firestore().collection("studentApp ")
-     .document(uid).setData(userData){err in
-     if let err = err {
-     print(err)
-     //  self.statusMessage = "\(err)"
-     return
-     }
-     print("sucsee ")
-     }
-     }
-     */
-    
-    /* func textFieldDidEndEditing(_ textField: UITextField) {
-     if activeField == emailTextfiled.text{
-     if textField.text?.isEmpty == false {
-     textField.checkUsername(field: emailTextfiled.text!) { (success) in
-     if success == true {
-     print("Username is taken") // Perform some action
-     } else {
-     print("Username is not taken")// Perform some action
-     }
-     }
-     }
-     }
-     
-     }  //ende
-     func checkUsername(field: String, completion: @escaping (Bool) -> Void) {
-     let collectionRef = Firestore.firestore().collection("Appstudent")
-     collectionRef.whereField("EmailStudent", isEqualTo: field).getDocuments { (snapshot, err) in
-     if let err = err {
-     print("Error getting document: \(err)")
-     } else if (snapshot?.isEmpty)! {
-     completion(false)
-     } else {
-     for document in (snapshot?.documents)! {
-     if document.data()["EmailStudent"] != nil {
-     completion(true)
-     }
-     }
-     }
-     }
-     }  //end*/
-    
-    
-    
-    // @IBAction func emailChange(_ sender: Any) {
-    // }
-    
-    
-    
-    // @IBAction func passChange(_ sender: Any) {
-    //}
     
     
     
