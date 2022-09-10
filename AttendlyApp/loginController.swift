@@ -82,20 +82,21 @@ class loginController: UIViewController {
                     Task {
                         if await self.checkEmailExist(email: email, collection: "Unistudent", field: "Emailstudent") {
                             print("student exists")
-                            self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                           self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
                             // students view
                         }
                         else if await self.checkEmailExist(email: email, collection: "Lectures", field: "EmailLectures") {
                             print("lectures exists")
-                           // self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                        self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
                             // lectures view
                         }
                         else {
                             print("not exists")
+                            
                             self.storeUserInformation()
-                          //  self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                          self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
                             
                         }
