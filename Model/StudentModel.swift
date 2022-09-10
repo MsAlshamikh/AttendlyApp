@@ -14,6 +14,9 @@ struct StudentModel {
     var Email: String = ""
     var status: Character = ""
     var studentID: String = ""
+    var Fname:String=""
+    var Lname:String=""
+    
     var sectionID = [Int]() //1,2,3
     // 1. Choose a date
     let today = Date()
