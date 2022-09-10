@@ -78,31 +78,57 @@ class loginController: UIViewController {
                 }else{   //user Auth in firebase
                     //     self.performSegue(withIdentifier: "LaunchScreen", sender: self)
                     print("sucsses")
-                    ///
-                    self.checkUserExist(emailckeck: email) { exist in
-                        if  exist {
-                            print("exist student in Unistudent")
-                            self.performSegue(withIdentifier: "movetoo", sender: self)
+                    
+                    Task {
+                        if await self.checkEmailExist(email: email, collection: "Unistudent", field: "Emailstudent") {
+                            print("student exists")
+                            self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
+                            // students view
                         }
-                        else{
-                            print("student not exist in Unistudent")
+                        else if await self.checkEmailExist(email: email, collection: "Lectures", field: "EmailLectures") {
+                            print("lectures exists")
+                           // self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                            Global.shared.useremailshare = email
+                            // lectures view
+                        }
+                        else {
+                            print("not exists")
                             self.storeUserInformation()
-                        }
-                    }   //end checkuserExist(student)
-                    
-                    
-                    self.checklectureExist(emailckeck: email) { exs in
-                        if  exs {
-                            print("exist lecture in Lectures")
-                            // self.performSegue(withIdentifier: "movetoo", sender: self)
+                          //  self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
+                            
                         }
-                        else{
-                            print(" lecture not exist in Lectures")
-                          //  self.storeUserInformation()
-                        }
-                    }   //end checklectureExist
+                    }
+                    
+                    ///
+//                    self.checkUserExist(emailckeck: email) { exist in
+//                        if  exist {
+//                            print("exist student in Unistudent")
+//
+//                            self.checklectureExist(emailckeck: email) { exs in
+//                                if  exs {
+//                                    self.performSegue(withIdentifier: "movetoo", sender: self)
+//                                    print("exist lecture in Lectures")
+//                                    // self.performSegue(withIdentifier: "movetoo", sender: self)
+//                                    Global.shared.useremailshare = email
+//                                }
+//                                else{
+//                                    print(" lecture not exist in Lectures")
+//                                  //  self.storeUserInformation()
+//                                }
+//                            }   //end checklectureExist
+//
+//                            Global.shared.useremailshare = email
+//                        }
+//                        else{
+//                            print("student not exist in Unistudent")
+//                            self.storeUserInformation()
+//                        }
+//                    }   //end checkuserExist(student)
+                    
+                    
+                    
                     
                     
                 }}
@@ -126,40 +152,51 @@ class loginController: UIViewController {
     
     //end
     
-    func checkUserExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
+    func checkEmailExist(email: String, collection: String, field: String) async -> Bool {
         let db = Firestore.firestore()
-        db.collection("Unistudent").whereField("Emailstudent", isEqualTo:emailckeck).getDocuments { snapshot, error in
-            if let error = error {
-                print("failed connection")
-            }
-            if let snapshot=snapshot {
-                if snapshot.count==0{
-                    //no student
-                    callback(false) }
-                else{
-              //      there student
-                    callback(true)
-                }
-            }
+        do {
+            let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
+            return snapshot.count != 0
+        } catch {
+            print(error.localizedDescription)
         }
+        return false
     }
-    func checklectureExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
-        let db = Firestore.firestore()
-        db.collection("Lectures").whereField("EmailLectures", isEqualTo:emailckeck).getDocuments { snapshot, error in
-            if let error = error {
-                print("failed connection")
-            }
-            if let snapshot=snapshot {
-                if snapshot.count==0{
-                    //no lecture in Lectures
-                    callback(false) }
-                else{
-                    //   there lecture in Lectures
-                    callback(true)
-                }
-            }
-        }
-    }
+    
+//    func checkUserExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
+//        let db = Firestore.firestore()
+//        db.collection("Unistudent").whereField("Emailstudent", isEqualTo:emailckeck).getDocuments { snapshot, error in
+//            if let error = error {
+//                print("failed connection")
+//            }
+//            if let snapshot=snapshot {
+//                if snapshot.count==0{
+//                    //no student
+//                    callback(false) }
+//                else{
+//              //      there student
+//                    callback(true)
+//                }
+//            }
+//        }
+//    }
+//    func checklectureExist(emailckeck:String, callback:@escaping (Bool) -> () )  {
+//        let db = Firestore.firestore()
+//        db.collection("Lectures").whereField("EmailLectures", isEqualTo:emailckeck).getDocuments { snapshot, error in
+//            if let error = error {
+//                print("failed connection")
+//            }
+//            if let snapshot=snapshot {
+//                if snapshot.count==0{
+//                    //no lecture in Lectures
+//                    callback(false) }
+//                else{
+//                    //   there lecture in Lectures
+//                    callback(true)
+//                }
+//            }
+//        }
+//    }
     
     
     
