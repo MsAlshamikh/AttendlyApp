@@ -12,20 +12,28 @@ import UIKit
 struct StudentModel {
     
     var Email: String = ""
-    var status: Character = ""
+    var status: String = ""
     var studentID: String = ""
     var Fname:String=""
     var Lname:String=""
     
     var sectionID = [Int]() //1,2,3
     // 1. Choose a date
-    let today = Date()
+    var today = Date()
+    
     // 2. Pick the date components
-    let hours   = (Calendar.current.component(.hour, from: today))
-    let minutes = (Calendar.current.component(.minute, from: today))
-    let seconds = (Calendar.current.component(.second, from: today))
+    //let hours = (Calendar.current.component(.hour, from: today))
+    //let minutes = (Calendar.current.component(.minute, from: today))
+    //let seconds = (Calendar.current.component(.second, from: today))
 
-    let currentTime =hours+minutes
+    //var currentTime = hours + minutes
+    //print(type(of: currentTime))
+    
+    
+   /* init(birthDate: Date, expiryDate: Date) {
+        
+    }*/
+    
     
     //if (startTime +15>= currentTime )>> status="L" ,,,,
     //if (startTime +30>= currentTime )>> status="L" ,,,,
