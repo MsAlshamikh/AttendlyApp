@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct StudentModel {
+class StudentModel {
     
     var Email: String = ""
     var status: String = ""
@@ -20,6 +20,8 @@ struct StudentModel {
     var sectionID = [Int]() //1,2,3
     // 1. Choose a date
     var today = Date()
+
+    
     
     // 2. Pick the date components
     //let hours = (Calendar.current.component(.hour, from: today))
