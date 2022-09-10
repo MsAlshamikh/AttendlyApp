@@ -12,7 +12,10 @@ import CoreNFC
 //import Firebase
 //import FirebaseDatabse
 // just a comment
+
+
 class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+
 
     @IBOutlet weak var NFCText: UITextView!
     
@@ -37,16 +40,13 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
                 
             }
             }}}
-      /*  db.collection("Unistudent").addDocument(data: ["advisorID": "441111111", "major" :"SWE","sFirstN":"Amani","sLastN":"Aldahmash","studentID":"441204066"])
-        {error in
-            if let error = error {
-                print("FAAAAAIIIIILLLL \(error)")
-            }
-            else{
-                print("YESSSSSSSSSSS")
-            }
-        }
-       */
+      
+    
+    
+    
+    
+
+    
     var nfcSession: NFCNDEFReaderSession?
     var type="None"
     
@@ -85,4 +85,11 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     }
     
     
+    
+    
 }
+     
+    
+    
+    
+    
