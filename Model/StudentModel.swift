@@ -22,12 +22,14 @@ class StudentModel {
     var today = Date()
 
     
+
     
     // 2. Pick the date components
     //let hours = (Calendar.current.component(.hour, from: today))
     //let minutes = (Calendar.current.component(.minute, from: today))
     //let seconds = (Calendar.current.component(.second, from: today))
 
+    //var currentTime: String = ""
     //var currentTime = hours + minutes
     //print(type(of: currentTime))
     
