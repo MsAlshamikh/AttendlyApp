@@ -28,7 +28,7 @@ class DetailsViewController: UIViewController {
         
         lecturerLabel.text = name
   
-        
+        //
         // Do any additional setup after loading the view.
     }
     

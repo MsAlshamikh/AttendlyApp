@@ -32,7 +32,7 @@ class ViewController: UIViewController {
      }}}*/
     func get(){
         let db = Firestore.firestore()
-        db.collection("Unistudent").whereField("StudentEmail", isEqualTo: "441201198@student.ksu.edu.sa").getDocuments{
+        db.collection("Unistudent").whereField("StudentEmail", isEqualTo: "322@student.ksu.edu.sa").getDocuments{
             (snapshot, error) in
             if let error = error {
                 print("FAIL ")
