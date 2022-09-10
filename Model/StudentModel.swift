@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 
-class StudentModel {
+
+struct StudentModel {
     
     var Email: String = ""
     var status: String = ""

@@ -52,6 +52,7 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
     
     @IBAction func ScanBtn(_ sender: Any) {
         nfcSession = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: true)
+        nfcSession?.alertMessage = "Hold your iPhone near the Lecturer device  ."
         nfcSession?.begin()
     }
     
