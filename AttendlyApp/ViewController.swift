@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             }}}*/
     func get(){
         let db = Firestore.firestore()
-        db.collection("Unistudent").whereField("Emailstudent", isEqualTo: "mo@gmail.com").getDocuments{
+        db.collection("Unistudent").whereField("StudentEmail", isEqualTo: "441201198@student.ksu.edu.sa").getDocuments{
             (snapshot, error) in
             if let error = error {
              print("FAIL ")
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
             else{
             print("SUCCESS")
                 let actual = snapshot!.documents.first!.get("courses") as! [String]
+                let sects = snapshot!.documents.first!.get("Sections") as! [String]
                 print(actual)
                 for i in 0..<actual.count {
                 
@@ -43,6 +44,9 @@ class ViewController: UIViewController {
                     label.setTitle(actual[i], for: .normal)
                     label.setTitleColor(UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2), for: .normal)
                     label.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
+                  //label.params["course"] = actual[i]
+                    //!!!!!!
+                    label.tag = Int(sects[i]) ?? 0
                     label.addTarget(self, action: #selector(self.pressed), for: .touchUpInside)
                     label.layer.cornerRadius = 0.07 * label.bounds.size.width
                     self.view.addSubview(label)
@@ -55,12 +59,59 @@ class ViewController: UIViewController {
 
 }
     
-    @objc func pressed() {
+    @objc func pressed(sender:UIButton) {
+      
+        //1
+        let titleB = sender.title(for: .normal)
+        //2
+        let section = String(sender.tag)
         
-        
+        self.performSegue(withIdentifier: "s1", sender: self)
+
+        let db = Firestore.firestore()
+         db.collection("Sections").whereField("section", isEqualTo: section).getDocuments{
+            (snapshot, error) in
+            if let error = error {
+             print("FAIL2 ")
+            }
+            else{
+                print("SUCCESS2")
+                let id = snapshot!.documents.first!.get("lecturerID") as! String
+                print(id)
+                
+                db.collection("Lecturer").whereField("id", isEqualTo: id).getDocuments{
+                    (snapshot, error) in
+                    if let error = error {
+                     print("FAIL3 ")
+                    }
+                    else{
+                    print("SUCCESS 3")
+                        let name = snapshot!.documents.first!.get("name") as! String
+                        //3
+                        print(name)
+                        
+                        
+                        let n = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 340 , width: 250, height: 50))
+                        n.text = name
+                        n.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
         
     }
+                }}}}
+    
+    @IBAction func exit(segue: UIStoryboardSegue){
+        print("exited")
+    }
+    
 }
 
     
 
+/*
+ let c = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 200 , width: 250, height: 50))
+ c.text = titleB
+ c.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
+ 
+ let s = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 270 , width: 250, height: 50))
+ s.text = section
+ s.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
+ */
