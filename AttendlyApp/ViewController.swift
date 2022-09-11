@@ -44,10 +44,10 @@ class ViewController: UIViewController {
                 print(actual)
                 for i in 0..<actual.count {
                     
-                    let label = UIButton(frame: .init(x: self.view.frame.midX-120 , y: 200 + ( Double(i) * 70 ), width: 250, height: 50))
+                    let label = UIButton(frame: .init(x: self.view.frame.midX-120 , y: 300 + ( Double(i) * 70 ), width: 250, height: 50))
                     label.setTitle(actual[i], for: .normal)
                     label.setTitleColor(UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2), for: .normal)
-                    label.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
+                    label.backgroundColor = UIColor(red: 254/255, green: 149/255, blue: 0/255, alpha: 0.75)
                     //label.params["course"] = actual[i]
                     //!!!!!!
                     label.tag = Int(sects[i]) ?? 0

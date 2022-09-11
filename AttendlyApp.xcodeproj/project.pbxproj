@@ -15,6 +15,12 @@
 		3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582E28CA477D003383CF /* LaunchScreen.storyboard */; };
 		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
 		A26C81CD28CCDF980074E5FA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */; };
+		A26C81D328CDAA170074E5FA /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D228CDAA170074E5FA /* profileController.swift */; };
+		A26C81D728CDB6B60074E5FA /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D628CDB6B60074E5FA /* loginController.swift */; };
+		A26C81D928CDBF8E0074E5FA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D828CDBF8E0074E5FA /* Global.swift */; };
+		A26C81DB28CDCE050074E5FA /* Untitled design (4).png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DA28CDCE050074E5FA /* Untitled design (4).png */; };
+		A26C81DD28CDCF450074E5FA /* Untitled design (4) copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */; };
+		A26C81DF28CDCFE00074E5FA /* Untitled design (4) copy 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DE28CDCFE00074E5FA /* Untitled design (4) copy 2.png */; };
 		AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +36,12 @@
 		3494583728CA490C003383CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A26C81D228CDAA170074E5FA /* profileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
+		A26C81D628CDB6B60074E5FA /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
+		A26C81D828CDBF8E0074E5FA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		A26C81DA28CDCE050074E5FA /* Untitled design (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4).png"; path = "../../Untitled design (4).png"; sourceTree = "<group>"; };
+		A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4) copy.png"; path = "../../Untitled design (4) copy.png"; sourceTree = "<group>"; };
+		A26C81DE28CDCFE00074E5FA /* Untitled design (4) copy 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4) copy 2.png"; path = "../../Untitled design (4) copy 2.png"; sourceTree = "<group>"; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +84,15 @@
 				3494582728CA477C003383CF /* ViewController.swift */,
 				A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
+				A26C81D228CDAA170074E5FA /* profileController.swift */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
+				A26C81DE28CDCFE00074E5FA /* Untitled design (4) copy 2.png */,
+				A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */,
+				A26C81DA28CDCE050074E5FA /* Untitled design (4).png */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
 				3494583128CA477D003383CF /* Info.plist */,
+				A26C81D628CDB6B60074E5FA /* loginController.swift */,
+				A26C81D828CDBF8E0074E5FA /* Global.swift */,
 				3494583728CA490C003383CF /* GoogleService-Info.plist */,
 			);
 			path = AttendlyApp;
@@ -157,10 +175,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26C81DD28CDCF450074E5FA /* Untitled design (4) copy.png in Resources */,
 				3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */,
+				A26C81DB28CDCE050074E5FA /* Untitled design (4).png in Resources */,
 				3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */,
 				3494582D28CA477D003383CF /* Assets.xcassets in Resources */,
 				3494582B28CA477C003383CF /* Main.storyboard in Resources */,
+				A26C81DF28CDCFE00074E5FA /* Untitled design (4) copy 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +236,11 @@
 			files = (
 				3494582828CA477C003383CF /* ViewController.swift in Sources */,
 				3494582428CA477C003383CF /* AppDelegate.swift in Sources */,
+				A26C81D328CDAA170074E5FA /* profileController.swift in Sources */,
+				A26C81D728CDB6B60074E5FA /* loginController.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
 				A26C81CD28CCDF980074E5FA /* DetailsViewController.swift in Sources */,
+				A26C81D928CDBF8E0074E5FA /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
