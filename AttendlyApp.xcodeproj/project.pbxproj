@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		3494582428CA477C003383CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582328CA477C003383CF /* AppDelegate.swift */; };
 		3494582628CA477C003383CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582528CA477C003383CF /* SceneDelegate.swift */; };
-		3494582828CA477C003383CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582728CA477C003383CF /* ViewController.swift */; };
+		3494582828CA477C003383CF /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582728CA477C003383CF /* SectionsVC.swift */; };
 		3494582B28CA477C003383CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582928CA477C003383CF /* Main.storyboard */; };
 		3494582D28CA477D003383CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3494582C28CA477D003383CF /* Assets.xcassets */; };
 		3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582E28CA477D003383CF /* LaunchScreen.storyboard */; };
 		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
+		53E2350228CDC9EE0078C4B0 /* AdvisorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350128CDC9EE0078C4B0 /* AdvisorVC.swift */; };
+		53E2350428CDCA1B0078C4B0 /* CurrentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */; };
+		53E2350628CDCA520078C4B0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350528CDCA520078C4B0 /* ProfileVC.swift */; };
 		AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +24,15 @@
 		3494582028CA477C003383CF /* AttendlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3494582328CA477C003383CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3494582528CA477C003383CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3494582728CA477C003383CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3494582728CA477C003383CF /* SectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
 		3494582A28CA477C003383CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3494582C28CA477D003383CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3494582F28CA477D003383CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3494583128CA477D003383CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3494583728CA490C003383CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		53E2350128CDC9EE0078C4B0 /* AdvisorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorVC.swift; sourceTree = "<group>"; };
+		53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVC.swift; sourceTree = "<group>"; };
+		53E2350528CDCA520078C4B0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +73,10 @@
 			children = (
 				3494582328CA477C003383CF /* AppDelegate.swift */,
 				3494582528CA477C003383CF /* SceneDelegate.swift */,
-				3494582728CA477C003383CF /* ViewController.swift */,
+				3494582728CA477C003383CF /* SectionsVC.swift */,
+				53E2350128CDC9EE0078C4B0 /* AdvisorVC.swift */,
+				53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */,
+				53E2350528CDCA520078C4B0 /* ProfileVC.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
@@ -83,7 +92,6 @@
 				BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */,
 				F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,9 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3494582828CA477C003383CF /* ViewController.swift in Sources */,
+				53E2350628CDCA520078C4B0 /* ProfileVC.swift in Sources */,
+				3494582828CA477C003383CF /* SectionsVC.swift in Sources */,
+				53E2350428CDCA1B0078C4B0 /* CurrentVC.swift in Sources */,
 				3494582428CA477C003383CF /* AppDelegate.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
+				53E2350228CDC9EE0078C4B0 /* AdvisorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
-class ViewController: UIViewController {
+class SectionsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
