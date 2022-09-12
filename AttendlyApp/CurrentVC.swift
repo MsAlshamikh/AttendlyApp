@@ -25,7 +25,7 @@ class CurrentVC: UIViewController {
                  }
                  else{
                      print("SUCCESS")
-                     let actual = snapshot!.documents.first!.get("Sectionss") as! [String]
+                     let actual = snapshot!.documents.first!.get("sections") as! [String]
                      
                      for i in 0..<actual.count {
                        //  var s = actual[i]
