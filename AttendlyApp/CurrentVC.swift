@@ -6,14 +6,40 @@
 //
 
 import UIKit
-
+import FirebaseFirestore
+ var sections=[String]()
 class CurrentVC: UIViewController {
+    var Sectionss: String = ""
 
     @IBOutlet weak var sectionText: UITextField!
     var SectionPicker = UIPickerView()
-    let sections=["00","99"]
+   
+    //
     
-    
+    func get(){
+             let db = Firestore.firestore()
+        db.collection("Sections").whereField("lecturerID", isEqualTo: "444444444").getDocuments{
+                 (snapshot, error) in
+                 if let error = error {
+                     print("FAIL")
+                 }
+                 else{
+                     print("SUCCESS")
+                    
+                     var s=snapshot!.documents.first!.get("section") as! String
+                     
+                     
+                     
+                         sections.append(s)
+
+                  
+                     }
+                 
+                 }
+        
+    }
+    //
+  //  var sections=["11","22"]
     
     
     
@@ -23,9 +49,12 @@ class CurrentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sectionText.inputView=SectionPicker
+       
+        sectionText.placeholder=" Select Section "
+      //  sectionText.textAlignment =.center
         SectionPicker.delegate=self
         SectionPicker.dataSource=self
-        sectionText.placeholder="Select Section"
+        get()
     }
     
 
@@ -54,6 +83,7 @@ func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: I
         return sections[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //
+        sectionText.text=sections[row]
+        sectionText.resignFirstResponder()
     }
 }
