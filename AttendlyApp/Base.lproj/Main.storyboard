@@ -143,11 +143,30 @@
                                 <rect key="frame" x="-225" y="0.0" width="865" height="391"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lup-hw-lPj">
+                                <rect key="frame" x="99" y="300" width="216" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Attendance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cus-Ou-ztd">
+                                <rect key="frame" x="0.0" y="56" width="262" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PqR-sb-SFe"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lup-hw-lPj" firstAttribute="top" secondItem="cus-Ou-ztd" secondAttribute="bottom" constant="170" id="NAr-PP-NvM"/>
+                            <constraint firstItem="lup-hw-lPj" firstAttribute="leading" secondItem="PqR-sb-SFe" secondAttribute="leading" constant="99" id="Nok-Ru-7zk"/>
+                            <constraint firstItem="PqR-sb-SFe" firstAttribute="trailing" secondItem="lup-hw-lPj" secondAttribute="trailing" constant="99" id="Weh-Gf-4WY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current" image="arrow.up.and.person.rectangle.portrait" catalog="system" id="Qcp-4w-kas"/>
+                    <connections>
+                        <outlet property="sectionText" destination="lup-hw-lPj" id="HLo-lY-x2L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYa-mz-71c" sceneMemberID="firstResponder"/>
             </objects>

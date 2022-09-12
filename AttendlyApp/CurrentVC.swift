@@ -9,10 +9,23 @@ import UIKit
 
 class CurrentVC: UIViewController {
 
+    @IBOutlet weak var sectionText: UITextField!
+    var SectionPicker = UIPickerView()
+    let sections=["00","99"]
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sectionText.inputView=SectionPicker
+        SectionPicker.delegate=self
+        SectionPicker.dataSource=self
+        sectionText.placeholder="Select Section"
     }
     
 
@@ -26,4 +39,21 @@ class CurrentVC: UIViewController {
     }
     */
 
+}
+extension CurrentVC:UIPickerViewDataSource,UIPickerViewDelegate{
+    
+
+func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+}
+
+func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return sections.count
+}
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return sections[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //
+    }
 }
