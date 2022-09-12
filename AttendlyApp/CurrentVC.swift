@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
-var sections=[""]
+var sections=["123","321","444"]
 class CurrentVC: UIViewController {
     var Sectionss: String = ""
 
@@ -16,7 +16,7 @@ class CurrentVC: UIViewController {
    
     //
     
-    func get(){
+   /* func get(){
              let db = Firestore.firestore()
         db.collection("Unistudent").whereField("lecturerID", isEqualTo: "123").getDocuments{
                  (snapshot, error) in
@@ -25,19 +25,19 @@ class CurrentVC: UIViewController {
                  }
                  else{
                      print("SUCCESS")
-                     let actual = snapshot!.documents.first!.get("sections") as! [String]
+                     let actual = snapshot!.documents.first!.get("Sectionss") as! String
                      
-                     for i in 0..<actual.count {
+                   
                        //  var s = actual[i]
                          //sections.append(s)
                        
-                         sections.append(actual[1])
-                     }
+                         sections.append(actual)
+                     
                      }
                  
                  }
         
-    }
+    }*/
     //
   //  var sections=["11","22"]
     
@@ -54,7 +54,7 @@ class CurrentVC: UIViewController {
       //  sectionText.textAlignment =.center
         SectionPicker.delegate=self
         SectionPicker.dataSource=self
-        get()
+        //get()
     }
     
 
