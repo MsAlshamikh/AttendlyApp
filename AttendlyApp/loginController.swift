@@ -37,11 +37,12 @@ class loginController: UIViewController {
     @IBOutlet weak var validationMessegepass: UILabel!
     
 
+    
+ 
     @IBOutlet weak var buttonlogin: UIButton!
     
 
     
-
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -421,5 +422,16 @@ class loginController: UIViewController {
 
     }  //end func
 
+    
+    //amani
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "s2" {
+            if let controller = segue.destination as? ViewController {
+                
+            }
+        }
+    }
+    
+    
     
 }

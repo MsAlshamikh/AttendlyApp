@@ -23,10 +23,10 @@ class DetailsViewController: UIViewController {
         courseLabel.text = titleB
    
         
-        sectionLabel.text = section
+        sectionLabel.text = "Section: " + section
 
         
-        lecturerLabel.text = name
+        lecturerLabel.text = "Lecturer: " + name
   
         //
         // Do any additional setup after loading the view.

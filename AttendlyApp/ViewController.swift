@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var noC: UILabel!
     var section: String = ""
     var titleB: String = ""
     var name: String = ""
@@ -39,14 +40,28 @@ class ViewController: UIViewController {
             }
             else{
                 print("SUCCESS")
-                let actual = snapshot!.documents.first!.get("courses") as! [String]
-                let sects = snapshot!.documents.first!.get("Sections") as! [String]
+                
+                let actualChk = snapshot!.documents.first!.get("courses") as! [String]
+                let sectsChk = snapshot!.documents.first!.get("Sections") as! [String]
+                if((actualChk.count == 1 && actualChk[0] == "" ) || (sectsChk.count == 1 && sectsChk[0] == "" ) )
+                {
+                    print("IT WOOOORKED")
+                    
+                    self.noC.text = "No courses \n registered!"
+                    
+                }
+                
+                //
+                else{
+                    let actual = snapshot!.documents.first!.get("courses") as! [String]
+                     let sects = snapshot!.documents.first!.get("Sections") as! [String]
                 print(actual)
                 for i in 0..<actual.count {
-                    
-                    let label = UIButton(frame: .init(x: self.view.frame.midX-120 , y: 300 + ( Double(i) * 70 ), width: 250, height: 50))
+
+                    let label = UIButton(frame: .init(x: self.view.frame.midX-148 , y: 280 + ( Double(i) * 90 ), width: 300, height: 60))
                     label.setTitle(actual[i], for: .normal)
-                    label.setTitleColor(UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2), for: .normal)
+                    label.titleLabel?.font = label.titleLabel?.font.withSize(30)
+                    label.setTitleColor(UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 2), for: .normal)
                     label.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
                     //label.params["course"] = actual[i]
                     //!!!!!!
@@ -54,7 +69,9 @@ class ViewController: UIViewController {
                     label.addTarget(self, action: #selector(self.pressed), for: .touchUpInside)
                     label.layer.cornerRadius = 0.07 * label.bounds.size.width
                     self.view.addSubview(label)
-                }
+                }}
+                
+               //
                 //Vstack
                 // coursesT.text = actual
                 //     print((actual).count)
@@ -95,17 +112,6 @@ class ViewController: UIViewController {
                         //3
                         //print(name)
                         
-//                        let c = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 200 , width: 250, height: 50))
-//                        c.text = titleB
-//                        c.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
-//
-//                        let s = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 270 , width: 250, height: 50))
-//                        s.text = section
-//                        s.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
-//
-//                        let n = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 340 , width: 250, height: 50))
-//                        n.text = name
-//                        n.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
                         
                     }
                 }
@@ -123,20 +129,70 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func exit(segue: UIStoryboardSegue){
-        print("exited")
-    }
-    
+  
 }
+/*
+func checkCoursesExist(email: String, collection: String, field: String) async -> Bool {
 
+    let db = Firestore.firestore()
 
+    do {
+
+        let snapshot = try await db.collection(collection).whereField(field, isEqualTo: email).getDocuments()
+        let scs = snapshot.documents.first!.get("lecturerID") as! String
+        
+        return scs.count != 0
+
+    } catch {
+
+        print(error.localizedDescription)
+
+    }
+
+    return false
+
+}
+ }*/
 
 /*
- let c = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 200 , width: 250, height: 50))
- c.text = titleB
- c.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
- 
- let s = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 270 , width: 250, height: 50))
- s.text = section
- s.textColor = UIColor(red: 55/255, green: 84/255, blue: 151/255, alpha: 2)
+ func get(){
+     let db = Firestore.firestore()
+     Task{
+         do{
+     db.collection("Unistudent").whereField("StudentEmail", isEqualTo: "322@student.ksu.edu.sa").getDocuments{
+         (snapshot, error) in
+         if let error = error {
+             print("FAIL ")
+         }
+         else{
+             print("SUCCESS")
+             if await self.checkCoursesExist(email: "322@student.ksu.edu.sa", collection: "Unistudent", field: "StudentEmail"){
+             let actual = snapshot!.documents.first!.get("courses") as! [String]
+             let sects = snapshot!.documents.first!.get("Sections") as! [String]
+             print(actual)
+             for i in 0..<actual.count {
+                 
+                 let label = UIButton(frame: .init(x: self.view.frame.midX-148 , y: 280 + ( Double(i) * 90 ), width: 300, height: 60))
+                 label.setTitle(actual[i], for: .normal)
+                 label.titleLabel?.font = label.titleLabel?.font.withSize(30)
+                 label.setTitleColor(UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 2), for: .normal)
+                 label.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
+                 //label.params["course"] = actual[i]
+                 //!!!!!!
+                 label.tag = Int(sects[i]) ?? 0
+                 label.addTarget(self, action: #selector(self.pressed), for: .touchUpInside)
+                 label.layer.cornerRadius = 0.07 * label.bounds.size.width
+                 self.view.addSubview(label)
+             }
+             //Vstack
+             // coursesT.text = actual
+             //     print((actual).count)
+         }
+             else
+             {let c = UILabel(frame: .init(x: self.view.frame.midX-120 , y: 200 , width: 250, height: 50))
+                 c.title = "No courses"}
+                 //
+             }}}
+         catch {
+         }}}
  */
