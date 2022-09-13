@@ -12,7 +12,7 @@ import UIKit
 class profileContoller: UIViewController {
 
 
-
+//
     @IBAction func loUGout(_ sender: Any) {
 
         print("logout!")
