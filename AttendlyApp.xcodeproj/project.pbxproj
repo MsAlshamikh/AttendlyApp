@@ -36,6 +36,13 @@
 		53E2350528CDCA520078C4B0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		53E2350728CFB36D0078C4B0 /* CheckInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInVC.swift; sourceTree = "<group>"; };
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A26C81D228CDAA170074E5FA /* profileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
+		A26C81D828CDBF8E0074E5FA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		A26C81E028CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled_design__4__copy_3-removebg-preview.png"; path = "../../Untitled_design__4__copy_3-removebg-preview.png"; sourceTree = "<group>"; };
+		A28E041928D0C670005065D9 /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
+		A28E041B28D0D0D2005065D9 /* 3596121.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3596121.png; path = ../../3596121.png; sourceTree = "<group>"; };
+		A2F2505328CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png"; path = "../../Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png"; sourceTree = "<group>"; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +88,15 @@
 				53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */,
 				53E2350528CDCA520078C4B0 /* ProfileVC.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
+				A26C81D228CDAA170074E5FA /* profileController.swift */,
+				A28E041928D0C670005065D9 /* loginController.swift */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
+				A28E041B28D0D0D2005065D9 /* 3596121.png */,
+				A2F2505328CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png */,
+				A26C81E028CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
 				3494583128CA477D003383CF /* Info.plist */,
+				A26C81D828CDBF8E0074E5FA /* Global.swift */,
 				3494583728CA490C003383CF /* GoogleService-Info.plist */,
 			);
 			path = AttendlyApp;
@@ -168,8 +181,11 @@
 			files = (
 				3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */,
 				3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */,
+				A26C81E128CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png in Resources */,
+				A28E041C28D0D0D3005065D9 /* 3596121.png in Resources */,
 				3494582D28CA477D003383CF /* Assets.xcassets in Resources */,
 				3494582B28CA477C003383CF /* Main.storyboard in Resources */,
+				A2F2505428CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
