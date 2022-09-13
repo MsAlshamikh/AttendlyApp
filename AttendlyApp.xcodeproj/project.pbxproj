@@ -21,6 +21,7 @@
 		A26C81DD28CDCF450074E5FA /* Untitled design (4) copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */; };
 		A26C81DF28CDCFE00074E5FA /* Untitled design (4) copy 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DE28CDCFE00074E5FA /* Untitled design (4) copy 2.png */; };
 		A26C81E128CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81E028CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png */; };
+		A28E041A28D0C670005065D9 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28E041928D0C670005065D9 /* loginController.swift */; };
 		A2F2505428CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A2F2505328CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png */; };
 		AE6AD7E219EE7EEE36017EC3 /* Pods_AttendlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4) copy.png"; path = "../../Untitled design (4) copy.png"; sourceTree = "<group>"; };
 		A26C81DE28CDCFE00074E5FA /* Untitled design (4) copy 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4) copy 2.png"; path = "../../Untitled design (4) copy 2.png"; sourceTree = "<group>"; };
 		A26C81E028CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled_design__4__copy_3-removebg-preview.png"; path = "../../Untitled_design__4__copy_3-removebg-preview.png"; sourceTree = "<group>"; };
+		A28E041928D0C670005065D9 /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		A2F2505328CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png"; path = "../../Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png"; sourceTree = "<group>"; };
 		BFE8D1356E8E702E9C4488D7 /* Pods-AttendlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.debug.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C8B0DD426833EF6B748EB9 /* Pods-AttendlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendlyApp.release.xcconfig"; path = "Target Support Files/Pods-AttendlyApp/Pods-AttendlyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
 				A26C81D228CDAA170074E5FA /* profileController.swift */,
+				A28E041928D0C670005065D9 /* loginController.swift */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
 				A2F2505328CE707400FCEA7A /* Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png */,
 				A26C81E028CE07D30074E5FA /* Untitled_design__4__copy_3-removebg-preview.png */,
@@ -244,6 +247,7 @@
 				A26C81D328CDAA170074E5FA /* profileController.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
 				A26C81CD28CCDF980074E5FA /* DetailsViewController.swift in Sources */,
+				A28E041A28D0C670005065D9 /* loginController.swift in Sources */,
 				A26C81D928CDBF8E0074E5FA /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

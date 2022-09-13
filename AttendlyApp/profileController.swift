@@ -15,7 +15,7 @@ class profileContoller: UIViewController {
 
     @IBAction func loUGout(_ sender: Any) {
 
-        print("hi")
+        print("logout!")
 
         self.performSegue(withIdentifier: "logoo", sender: self)
 
