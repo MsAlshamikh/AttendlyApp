@@ -8,41 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sections-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SectionsVC" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PHOTO-2022-09-11-19-17-48" translatesAutoresizingMaskIntoConstraints="NO" id="FI2-MR-TLu">
-                                <rect key="frame" x="-65" y="43" width="519" height="370"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu7-EM-aIu">
-                                <rect key="frame" x="20" y="44" width="221" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="FI2-MR-TLu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-45" id="Fkl-xp-1Y0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FI2-MR-TLu" secondAttribute="bottom" constant="400" id="HS2-c2-pUd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FI2-MR-TLu" secondAttribute="trailing" constant="-40" id="SjC-m9-PoT"/>
-                            <constraint firstItem="FI2-MR-TLu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-30" id="UDD-nS-kzA"/>
-                            <constraint firstItem="FI2-MR-TLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-65" id="jJj-WU-zUl"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Sections" image="person.3.fill" catalog="system" id="BvE-5y-eGz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1555.072463768116" y="169.41964285714286"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y9e-yw-LvO">
             <objects>
@@ -54,84 +19,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.56862745098039214" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.054901960784313725" green="0.56862745098039214" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QOR-MC-rUA"/>
-                        <segue destination="4JD-Gu-eAK" kind="relationship" relationship="viewControllers" id="Lus-z8-hg6"/>
-                        <segue destination="vrU-B1-ySR" kind="relationship" relationship="viewControllers" id="vXT-5t-hjO"/>
-                        <segue destination="HHf-ze-CAU" kind="relationship" relationship="viewControllers" id="TeS-4N-hSh"/>
+                        <segue destination="bSi-ic-p4U" kind="relationship" relationship="viewControllers" id="Scx-Vh-wq5"/>
+                        <segue destination="vrU-B1-ySR" kind="relationship" relationship="viewControllers" id="3H8-wv-G9K"/>
+                        <segue destination="GLd-Rc-tPk" kind="relationship" relationship="viewControllers" id="gBw-2H-Jn2"/>
+                        <segue destination="Odv-me-NRa" kind="relationship" relationship="viewControllers" id="ot4-rX-txi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUJ-Jc-xqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="-700"/>
-        </scene>
-        <!--Advisor-->
-        <scene sceneID="cbT-X6-C5J">
-            <objects>
-                <viewController id="4JD-Gu-eAK" customClass="AdvisorVC" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hti-wk-hRa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rania Alageel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhl-3U-uC1" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="86" y="1286" width="175" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM7-8L-qcE">
-                                <rect key="frame" x="0.0" y="44" width="262" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PHOTO-2022-09-11-19-17-48" translatesAutoresizingMaskIntoConstraints="NO" id="YcA-nh-hAl">
-                                <rect key="frame" x="-57" y="0.0" width="529" height="359"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Qdm-rc-lhz"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Advisor" image="person.wave.2.fill" catalog="system" id="eut-Xq-sE2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yni-Wy-qHR" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-730" y="169"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="lyI-jH-pBb">
-            <objects>
-                <viewController id="HHf-ze-CAU" customClass="ProfileVC" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BQd-FG-tZR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PHOTO-2022-09-11-19-17-48" translatesAutoresizingMaskIntoConstraints="NO" id="bvR-cU-Tn9">
-                                <rect key="frame" x="-7" y="0.0" width="429" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU6-c1-Jgh">
-                                <rect key="frame" x="0.0" y="44" width="205" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="e1g-IY-eF1"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="SUh-jW-A6T"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKn-i1-EDj" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1057.9710144927537" y="105.80357142857143"/>
         </scene>
         <!--Current-->
         <scene sceneID="2hu-nf-YYH">
@@ -147,7 +47,7 @@
                                 <rect key="contentStretch" x="0.050000000000000003" y="0.050000000000000003" width="1" height="1"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oJ0-Pc-tEF">
-                                <rect key="frame" x="20" y="89" width="374" height="258"/>
+                                <rect key="frame" x="20" y="45" width="374" height="258"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-da-5OE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -264,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYa-mz-71c" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.82608695652175" y="168.75"/>
+            <point key="canvasLocation" x="-1012" y="169"/>
         </scene>
         <!--Current-->
         <scene sceneID="B2r-Du-LQn">
@@ -386,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anC-Ac-OCZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.82608695652175" y="888.61607142857144"/>
+            <point key="canvasLocation" x="-1104" y="840"/>
         </scene>
         <!--Check In-->
         <scene sceneID="4tf-a7-VkO">
@@ -396,7 +296,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="G6D-GH-nki">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="G6D-GH-nki">
                                 <rect key="frame" x="-65" y="-12" width="818" height="340"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Check in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkJ-Ag-SbH">
@@ -439,7 +339,7 @@
             </objects>
             <point key="canvasLocation" x="2658" y="-229"/>
         </scene>
-        <!--Profile Controller-->
+        <!--Item-->
         <scene sceneID="pmz-cb-fqq">
             <objects>
                 <viewController id="Odv-me-NRa" customClass="profileController" sceneMemberID="viewController">
@@ -447,7 +347,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-FT-Ztf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Skp-FT-Ztf">
                                 <rect key="frame" x="-65" y="0.0" width="818" height="340"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9u-b6-bOL">
@@ -472,11 +372,12 @@
                             <constraint firstItem="Skp-FT-Ztf" firstAttribute="leading" secondItem="A6w-T3-yhA" secondAttribute="leading" constant="-65" id="tSv-wh-y4D"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9un-w2-t65"/>
                     <navigationItem key="navigationItem" id="d6l-wU-Kbd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4u-At-FRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7210" y="-761"/>
+            <point key="canvasLocation" x="983" y="169"/>
         </scene>
         <!--Sections-->
         <scene sceneID="U9l-fj-NZb">
@@ -486,7 +387,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gtx-Ez-qB6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gtx-Ez-qB6">
                                 <rect key="frame" x="-66" y="-25" width="818" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -505,36 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxf-RX-o3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6370" y="-726"/>
-        </scene>
-        <!--Current-->
-        <scene sceneID="Ibh-gI-Xgx">
-            <objects>
-                <viewController id="DWK-Fr-2jd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xk5-CH-c9T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-dn-FDK">
-                                <rect key="frame" x="20" y="71" width="246" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="fCW-2Z-B5c">
-                                <rect key="frame" x="-42" y="-24" width="818" height="340"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dR8-aO-fYA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Current" image="livephoto" catalog="system" id="uxL-oF-pmc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wiE-Af-w8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5575" y="-1092"/>
+            <point key="canvasLocation" x="-1665" y="169"/>
         </scene>
         <!--Advisees-->
         <scene sceneID="jcT-lI-EXF">
@@ -544,7 +416,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="C64-eS-cWE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="C64-eS-cWE">
                                 <rect key="frame" x="-45" y="-30" width="818" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -563,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAB-j0-XWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6370" y="-1370"/>
+            <point key="canvasLocation" x="62" y="169"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QkU-MV-Yi8">
@@ -573,7 +445,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xpE-dJ-sBW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2588235438" green="0.56078433989999998" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="tm2-fR-t11" kind="relationship" relationship="viewControllers" id="vDH-kz-5XA"/>
@@ -593,7 +468,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="j15-59-zNE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="j15-59-zNE">
                                 <rect key="frame" x="-46" y="-27" width="818" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -634,7 +509,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-eb-9WX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-eb-9WX">
                                 <rect key="frame" x="-65" y="-4" width="818" height="340"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Courses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHS-Ya-kRU">
@@ -660,10 +535,11 @@
                             <constraint firstItem="4K7-eb-9WX" firstAttribute="leading" secondItem="ghb-9N-lic" secondAttribute="leading" constant="-65" id="beP-Bp-wc9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Statistics" id="6HS-QD-IYG"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="chart.bar.doc.horizontal.fill" catalog="system" id="6HS-QD-IYG"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="MLC-F5-e5V"/>
                     <connections>
                         <outlet property="noC" destination="ySd-sE-ZUB" id="uSq-en-W0O"/>
+                        <segue destination="ohY-Lt-pod" kind="show" identifier="s1" id="gAt-Vk-2ja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHg-yF-BhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -678,7 +554,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="wqv-Ad-iFh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="wqv-Ad-iFh">
                                 <rect key="frame" x="-65" y="-17" width="818" height="340"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os4-ar-B6p">
@@ -789,7 +665,7 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="dm3-Bc-eJP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2.png" translatesAutoresizingMaskIntoConstraints="NO" id="dm3-Bc-eJP">
                                 <rect key="frame" x="0.0" y="0.0" width="818" height="312"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="818" id="BvR-BN-o3A"/>
@@ -797,7 +673,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="340" id="qeK-7R-bHL"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-CR-4lr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7lH-CR-4lr">
                                 <rect key="frame" x="-146" y="677" width="560" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -849,10 +725,10 @@
         <!--Navigation Controller-->
         <scene sceneID="bIG-MJ-fGN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzg-4I-lT3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xzg-4I-lT3" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yoK-Jd-moo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -865,19 +741,17 @@
             <point key="canvasLocation" x="1227.536231884058" y="-912.05357142857133"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="IMG_5628" width="1284" height="1069"/>
-        <image name="PHOTO-2022-09-11-19-17-48" width="420" height="358"/>
-        <image name="Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png" width="176.84210205078125" height="150.73684692382812"/>
-        <image name="Untitled_design__4__copy_3-removebg-preview.png" width="176.84210205078125" height="150.73684692382812"/>
         <image name="arrow.up.and.person.rectangle.portrait" catalog="system" width="128" height="100"/>
+        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
         <image name="checkmark.diamond.fill" catalog="system" width="128" height="122"/>
         <image name="doc.on.doc" catalog="system" width="116" height="128"/>
-        <image name="livephoto" catalog="system" width="128" height="122"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="person.wave.2.fill" catalog="system" width="128" height="118"/>
+        <image name="pic1.png" width="420" height="358"/>
+        <image name="pic2.png" width="420" height="358"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
