@@ -16,6 +16,9 @@
 		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
 		53415F1E28D1373A005DFA19 /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53415F1D28D1373A005DFA19 /* loginController.swift */; };
 		53415F2028D13741005DFA19 /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53415F1F28D13740005DFA19 /* profileController.swift */; };
+		53415F2228D13965005DFA19 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53415F2128D13965005DFA19 /* Global.swift */; };
+		53415F2428D1396C005DFA19 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53415F2328D1396C005DFA19 /* CourseViewController.swift */; };
+		53415F2628D13973005DFA19 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53415F2528D13973005DFA19 /* DetailsViewController.swift */; };
 		53E2350228CDC9EE0078C4B0 /* AdvisorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350128CDC9EE0078C4B0 /* AdvisorVC.swift */; };
 		53E2350428CDCA1B0078C4B0 /* CurrentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */; };
 		53E2350628CDCA520078C4B0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E2350528CDCA520078C4B0 /* ProfileVC.swift */; };
@@ -35,6 +38,9 @@
 		3494583728CA490C003383CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53415F1D28D1373A005DFA19 /* loginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		53415F1F28D13740005DFA19 /* profileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
+		53415F2128D13965005DFA19 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		53415F2328D1396C005DFA19 /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		53415F2528D13973005DFA19 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		53E2350128CDC9EE0078C4B0 /* AdvisorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorVC.swift; sourceTree = "<group>"; };
 		53E2350328CDCA1B0078C4B0 /* CurrentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVC.swift; sourceTree = "<group>"; };
 		53E2350528CDCA520078C4B0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				53E2350528CDCA520078C4B0 /* ProfileVC.swift */,
 				53415F1D28D1373A005DFA19 /* loginController.swift */,
 				53415F1F28D13740005DFA19 /* profileController.swift */,
+				53415F2528D13973005DFA19 /* DetailsViewController.swift */,
+				53415F2128D13965005DFA19 /* Global.swift */,
+				53415F2328D1396C005DFA19 /* CourseViewController.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
 				3494582C28CA477D003383CF /* Assets.xcassets */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
@@ -235,8 +244,11 @@
 				3494582428CA477C003383CF /* AppDelegate.swift in Sources */,
 				53E2350828CFB36D0078C4B0 /* CheckInVC.swift in Sources */,
 				53415F1E28D1373A005DFA19 /* loginController.swift in Sources */,
+				53415F2428D1396C005DFA19 /* CourseViewController.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
+				53415F2228D13965005DFA19 /* Global.swift in Sources */,
 				53E2350228CDC9EE0078C4B0 /* AdvisorVC.swift in Sources */,
+				53415F2628D13973005DFA19 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NM26W3U2D9;
+				DEVELOPMENT_TEAM = W78XWDZL72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NM26W3U2D9;
+				DEVELOPMENT_TEAM = W78XWDZL72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
