@@ -117,7 +117,7 @@ class loginController: UIViewController {
                           //  if self.isValidEmailLectures(emailID: email) == true  {
                               //  self.storeLecturesInformation() }
                          //MODHI & Y
-                        //    self.performSegue(withIdentifier: "gotoStudents", sender: self)
+                          self.performSegue(withIdentifier: "gotoLecturers", sender: self)
                             Global.shared.useremailshare = email
                             // lectures view
                         }
