@@ -45,15 +45,15 @@ class loginController: UIViewController {
         validationMassege.isHidden = true   // not show
         validationMessegepass.isHidden = true
         
-        guard let email = emailTextfiled.text?.trimmingCharacters(in: .whitespaces)
+        guard let email = emailTextfiled.text?.trimmingCharacters(in: .whitespaces) , !email.isEmpty
         else {
             validationMassege.isHidden = false
-            validationMassege.text = "please Enter your Email"
+            validationMassege.text = "please enter your Email"
             return (false, "", "")
         }
         guard let password = passwordTextfiled.text, !password.isEmpty else {
             validationMessegepass.isHidden = false
-            validationMessegepass.text = "please Enter your password"
+            validationMessegepass.text = "please enter your password"
             return (false, "", "")
         }
         if !isValidEmail(emailID: email) {
@@ -87,7 +87,10 @@ class loginController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 if let e=error{   //if no connect with firebase
                     print("failed")
-                    print(e)
+                    let alert = UIAlertController(title: "Error", message: "No exist user ,try agin", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                   // print(e)
                 }else{   //user Auth in firebase
                     print("sucsses")
                     
