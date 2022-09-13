@@ -252,7 +252,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hs-bN-S4Q">
-                                <rect key="frame" x="45" y="422" width="330" height="41"/>
+                                <rect key="frame" x="45" y="422" width="330" height="38.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -278,7 +278,7 @@
                                 <color key="textColor" red="0.0546239242" green="0.56918227669999999" blue="0.63161116839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldO-2i-H1t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldO-2i-H1t">
                                 <rect key="frame" x="45" y="467" width="286" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
@@ -292,7 +292,7 @@
                                 <color key="textColor" red="0.0546239242" green="0.56918227669999999" blue="0.63161116839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFh-g6-LD8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFh-g6-LD8">
                                 <rect key="frame" x="45" y="578" width="286" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
@@ -329,7 +329,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginpressed:" destination="CXZ-yL-87n" eventType="touchUpInside" id="xjv-bR-wwh"/>
-                                    <segue destination="f2r-eK-ppM" kind="show" identifier="gotoStudents" id="Fla-P2-Asd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -349,6 +348,7 @@
                         <outlet property="passwordTextfiled" destination="xwI-6N-amU" id="HCc-1B-rPO"/>
                         <outlet property="validationMassege" destination="ldO-2i-H1t" id="PWH-Vd-zJ0"/>
                         <outlet property="validationMessegepass" destination="IFh-g6-LD8" id="zES-2c-Ot3"/>
+                        <segue destination="f2r-eK-ppM" kind="show" identifier="gotoStudents" id="lab-AS-zOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88a-5u-G9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -380,6 +380,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dRH-dm-orA" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="iU7-fZ-Ga0"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="veO-cw-AH9">
                         <autoresizingMask key="autoresizingMask"/>
@@ -396,6 +397,7 @@
         <!--Profile-->
         <scene sceneID="Zqg-7t-BLc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-eb-rzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="J1c-2O-AQf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="pln-kx-YhU"/>
                     <toolbarItems/>
@@ -408,7 +410,6 @@
                         <segue destination="b7a-NA-gny" kind="relationship" relationship="rootViewController" id="foR-1m-72x"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-eb-rzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2476.811594202899" y="71.651785714285708"/>
         </scene>
