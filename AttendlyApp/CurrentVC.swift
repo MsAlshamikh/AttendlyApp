@@ -59,7 +59,7 @@ class CurrentVC: UIViewController {
             let button = UIButton()
             button.heightAnchor.constraint(equalToConstant: 50).isActive = true
             button.setTitleColor(UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 1), for: .normal)
-            button.backgroundColor = UIColor(red: 125/255, green: 206/125, blue: 148/255, alpha: 1)
+            button.backgroundColor = UIColor(red: 171/255, green: 193/255, blue: 198/255, alpha:1)
             button.setTitle(course, for: .normal)
             button.tag = index
             button.addTarget(self, action: #selector(fetchStudentsFor(sender:)), for: .touchUpInside)
