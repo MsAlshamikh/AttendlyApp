@@ -34,14 +34,14 @@ class CourseViewController: UIViewController {
      }}}*/
     func get(){
         let db = Firestore.firestore()
-        db.collection("Unistudent").whereField("StudentEmail", isEqualTo: "322@student.ksu.edu.sa").getDocuments{
+        db.collection("Unistudent").whereField("StudentEmail", isEqualTo: Global.shared.useremailshare).getDocuments{
             (snapshot, error) in
             if let error = error {
                 print("FAIL ")
             }
             else{
                 print("SUCCESS")
-                
+                print(Global.shared.useremailshare)
                 let actualChk = snapshot!.documents.first!.get("courses") as! [String]
                 let sectsChk = snapshot!.documents.first!.get("Sections") as! [String]
                 if((actualChk.count == 1 && actualChk[0] == "" ) || (sectsChk.count == 1 && sectsChk[0] == "" ) )

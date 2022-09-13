@@ -92,17 +92,19 @@ class loginController: UIViewController {
                     print("sucsses")
                     
                     Task {
-                        if await self.checkEmailExist(email: email, collection: "Unistudent", field: "EmailStudent") {
+                        if await self.checkEmailExist(email: email, collection: "Unistudent", field: "StudentEmail") {
                             // if self.isValidEmailSttudent (emailID: email) == true  {
                             //   self.storeUserInformation()
                             // }
-                            if await !self.checkEmailExist(email: email, collection: "Appstudent", field: "EmailStudent") {
-                                await self.storeUserInformation(collection: "Appstudent", data: ["EmailStudent": email])
+                            if await !self.checkEmailExist(email: email, collection: "Appstudent", field: "StudentEmail") {
+                                await self.storeUserInformation(collection: "Appstudent", data: ["StudentEmail": email])
                             }
                             
                             print("student exists")
                       self.performSegue(withIdentifier: "gotoStudents", sender: self)
                             Global.shared.useremailshare = email
+                            print("this is the email amani: " + email)
+                            print("this is the global amani: " + Global.shared.useremailshare)
                             // students view
                         }
                         else if await self.checkEmailExist(email: email, collection: "Lectures", field: "EmailLectures") {
