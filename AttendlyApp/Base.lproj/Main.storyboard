@@ -181,7 +181,7 @@
         <!--Current-->
         <scene sceneID="TAY-4k-KpC">
             <objects>
-                <viewController id="YFT-25-qXo" sceneMemberID="viewController">
+                <viewController id="YFT-25-qXo" customClass="CurrentVC" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xym-up-CC3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,15 +204,101 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CsR-Ym-jba">
+                                <rect key="frame" x="151" y="254" width="114.5" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-Dn-vWa">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="31"/>
+                                        <color key="backgroundColor" red="0.72768610720000004" green="0.88282841440000004" blue="0.7883364558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Select Course"/>
+                                        <connections>
+                                            <action selector="selectCourse:" destination="YFT-25-qXo" eventType="touchUpInside" id="2mW-Tp-7x4"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yHe-EY-OpH">
+                                        <rect key="frame" x="24" y="39" width="67" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS4-jb-yDg">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="butSection1:" destination="YFT-25-qXo" eventType="touchUpInside" id="BVn-lU-h6s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtP-Vy-7Zh">
+                                                <rect key="frame" x="0.0" y="39" width="67" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="butSection1:" destination="YFT-25-qXo" eventType="touchUpInside" id="T8D-Dm-PGr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-Gi-57q">
+                                                <rect key="frame" x="0.0" y="78" width="67" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="butSection1:" destination="YFT-25-qXo" eventType="touchUpInside" id="Wcx-lP-KHM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RLd-EE-NdM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current" image="livephoto" catalog="system" id="XFM-3Q-Kzg"/>
+                    <connections>
+                        <outlet property="butsection1Collection" destination="wRv-Gi-57q" id="aM4-YS-6LE"/>
+                        <outlet property="buttonsStackView" destination="yHe-EY-OpH" id="xtA-Yj-oVW"/>
+                        <outlet property="selectCourseBtn" destination="Uq6-Dn-vWa" id="TYh-Ux-bdd"/>
+                        <outletCollection property="butsection1Collection" destination="VS4-jb-yDg" collectionClass="NSMutableArray" id="yeF-kr-fQk"/>
+                        <outletCollection property="butsection1Collection" destination="dtP-Vy-7Zh" collectionClass="NSMutableArray" id="Sm3-qm-QQi"/>
+                        <outletCollection property="butsection1Collection" destination="wRv-Gi-57q" collectionClass="NSMutableArray" id="EtW-PX-o9k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioc-bj-IUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865" y="-2322"/>
+            <point key="canvasLocation" x="2982.608695652174" y="-2355.1339285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Swy-p5-fMi">
+            <objects>
+                <viewController id="jxb-wE-Kq9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NY0-iv-0MV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Untitled_design__4__copy_3-removebg-preview.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dyt-Jl-Eyl">
+                                <rect key="frame" x="-35" y="-20" width="818" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzz-Js-2PR">
+                                <rect key="frame" x="24" y="66" width="158" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QLx-Dl-aN9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvh-0w-Lc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3691" y="-2354"/>
         </scene>
         <!--Advisees-->
         <scene sceneID="8rf-N4-Sv7">
@@ -391,7 +477,7 @@
         <scene sceneID="yT9-P0-3d9">
             <objects>
                 <viewController id="CXZ-yL-87n" customClass="loginController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="t1z-ha-0fr">
+                    <view key="view" contentMode="scaleToFill" id="t1z-ha-0fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -582,6 +668,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
