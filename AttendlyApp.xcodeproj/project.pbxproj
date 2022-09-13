@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		3494582428CA477C003383CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582328CA477C003383CF /* AppDelegate.swift */; };
 		3494582628CA477C003383CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582528CA477C003383CF /* SceneDelegate.swift */; };
-		3494582828CA477C003383CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582728CA477C003383CF /* ViewController.swift */; };
+		3494582828CA477C003383CF /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494582728CA477C003383CF /* CourseViewController.swift */; };
 		3494582B28CA477C003383CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582928CA477C003383CF /* Main.storyboard */; };
 		3494582D28CA477D003383CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3494582C28CA477D003383CF /* Assets.xcassets */; };
 		3494583028CA477D003383CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3494582E28CA477D003383CF /* LaunchScreen.storyboard */; };
 		3494583828CA490C003383CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3494583728CA490C003383CF /* GoogleService-Info.plist */; };
 		A26C81CD28CCDF980074E5FA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */; };
 		A26C81D328CDAA170074E5FA /* profileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D228CDAA170074E5FA /* profileController.swift */; };
-		A26C81D728CDB6B60074E5FA /* loginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D628CDB6B60074E5FA /* loginController.swift */; };
 		A26C81D928CDBF8E0074E5FA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C81D828CDBF8E0074E5FA /* Global.swift */; };
 		A26C81DB28CDCE050074E5FA /* Untitled design (4).png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DA28CDCE050074E5FA /* Untitled design (4).png */; };
 		A26C81DD28CDCF450074E5FA /* Untitled design (4) copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */; };
@@ -30,7 +29,7 @@
 		3494582028CA477C003383CF /* AttendlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3494582328CA477C003383CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3494582528CA477C003383CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3494582728CA477C003383CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3494582728CA477C003383CF /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		3494582A28CA477C003383CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3494582C28CA477D003383CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3494582F28CA477D003383CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		950B2AFA934967E87F1393F0 /* Pods_AttendlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A26C81D228CDAA170074E5FA /* profileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileController.swift; sourceTree = "<group>"; };
-		A26C81D628CDB6B60074E5FA /* loginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginController.swift; sourceTree = "<group>"; };
 		A26C81D828CDBF8E0074E5FA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		A26C81DA28CDCE050074E5FA /* Untitled design (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4).png"; path = "../../Untitled design (4).png"; sourceTree = "<group>"; };
 		A26C81DC28CDCF440074E5FA /* Untitled design (4) copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled design (4) copy.png"; path = "../../Untitled design (4) copy.png"; sourceTree = "<group>"; };
@@ -85,7 +83,7 @@
 			children = (
 				3494582328CA477C003383CF /* AppDelegate.swift */,
 				3494582528CA477C003383CF /* SceneDelegate.swift */,
-				3494582728CA477C003383CF /* ViewController.swift */,
+				3494582728CA477C003383CF /* CourseViewController.swift */,
 				A26C81CC28CCDF980074E5FA /* DetailsViewController.swift */,
 				3494582928CA477C003383CF /* Main.storyboard */,
 				A26C81D228CDAA170074E5FA /* profileController.swift */,
@@ -97,7 +95,6 @@
 				A26C81DA28CDCE050074E5FA /* Untitled design (4).png */,
 				3494582E28CA477D003383CF /* LaunchScreen.storyboard */,
 				3494583128CA477D003383CF /* Info.plist */,
-				A26C81D628CDB6B60074E5FA /* loginController.swift */,
 				A26C81D828CDBF8E0074E5FA /* Global.swift */,
 				3494583728CA490C003383CF /* GoogleService-Info.plist */,
 			);
@@ -242,10 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3494582828CA477C003383CF /* ViewController.swift in Sources */,
+				3494582828CA477C003383CF /* CourseViewController.swift in Sources */,
 				3494582428CA477C003383CF /* AppDelegate.swift in Sources */,
 				A26C81D328CDAA170074E5FA /* profileController.swift in Sources */,
-				A26C81D728CDB6B60074E5FA /* loginController.swift in Sources */,
 				3494582628CA477C003383CF /* SceneDelegate.swift in Sources */,
 				A26C81CD28CCDF980074E5FA /* DetailsViewController.swift in Sources */,
 				A26C81D928CDBF8E0074E5FA /* Global.swift in Sources */,

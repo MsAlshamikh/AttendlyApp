@@ -8,7 +8,8 @@
 import UIKit
 import FirebaseFirestore
 
-class ViewController: UIViewController {
+class CourseViewController: UIViewController {
+    
     
     @IBOutlet weak var noC: UILabel!
     var section: String = ""
@@ -67,6 +68,8 @@ class ViewController: UIViewController {
                     //!!!!!!
                     label.tag = Int(sects[i]) ?? 0
                     label.addTarget(self, action: #selector(self.pressed), for: .touchUpInside)
+                    label.addTarget(self, action: #selector(self.pressed1), for: .touchDown)
+                    label.addTarget(self, action: #selector(self.pressed2), for: .touchDragExit)
                     label.layer.cornerRadius = 0.07 * label.bounds.size.width
                     self.view.addSubview(label)
                 }}
@@ -79,8 +82,23 @@ class ViewController: UIViewController {
         }
         
     }
+    @objc func pressed1(sender:UIButton) {
+        sender.setTitleColor(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 2), for: .normal)
+        sender.backgroundColor = UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 0.75)
+        
+    }
+    
+    @objc func pressed2(sender:UIButton) {
+        sender.setTitleColor(UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 2), for: .normal)
+        sender.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
+        
+    }
     
     @objc func pressed(sender:UIButton) {
+       
+        
+        sender.setTitleColor(UIColor(red: 20/255, green: 108/255, blue: 120/255, alpha: 2), for: .normal)
+        sender.backgroundColor = UIColor(red: 138/255, green: 176/255, blue: 183/255, alpha: 0.75)
         
         //1
         titleB = sender.title(for: .normal)!
