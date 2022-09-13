@@ -152,7 +152,7 @@
         <!--Sections-->
         <scene sceneID="1CD-v9-3oc">
             <objects>
-                <viewController id="fV5-pe-uXf" sceneMemberID="viewController">
+                <viewController id="fV5-pe-uXf" customClass="SectionsVC" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ps-xD-ipa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +197,13 @@
                                 <rect key="frame" x="-42" y="-24" width="818" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0P-tx-SSJ">
+                                <rect key="frame" x="20" y="69" width="246" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RLd-EE-NdM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -384,7 +391,7 @@
         <scene sceneID="yT9-P0-3d9">
             <objects>
                 <viewController id="CXZ-yL-87n" customClass="loginController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="t1z-ha-0fr">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="t1z-ha-0fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
