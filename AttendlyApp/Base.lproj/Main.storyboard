@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PHOTO-2022-09-11-19-17-48" translatesAutoresizingMaskIntoConstraints="NO" id="FI2-MR-TLu">
-                                <rect key="frame" x="-65" y="-1" width="519" height="414"/>
+                                <rect key="frame" x="-65" y="43" width="519" height="370"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu7-EM-aIu">
                                 <rect key="frame" x="20" y="44" width="221" height="51"/>
@@ -48,6 +48,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zL5-RA-Fpi" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uz5-nU-2k1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dNe-ZW-otD">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +147,7 @@
                                 <rect key="contentStretch" x="0.050000000000000003" y="0.050000000000000003" width="1" height="1"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oJ0-Pc-tEF">
-                                <rect key="frame" x="20" y="45" width="374" height="258"/>
+                                <rect key="frame" x="20" y="89" width="374" height="258"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-da-5OE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -436,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADh-1X-K91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="-273"/>
+            <point key="canvasLocation" x="2658" y="-229"/>
         </scene>
         <!--Profile Controller-->
         <scene sceneID="pmz-cb-fqq">
@@ -475,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4u-At-FRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4941" y="-1321"/>
+            <point key="canvasLocation" x="7210" y="-761"/>
         </scene>
         <!--Sections-->
         <scene sceneID="U9l-fj-NZb">
@@ -504,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxf-RX-o3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4264" y="-1615"/>
+            <point key="canvasLocation" x="6370" y="-726"/>
         </scene>
         <!--Current-->
         <scene sceneID="Ibh-gI-Xgx">
@@ -533,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiE-Af-w8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865" y="-2322"/>
+            <point key="canvasLocation" x="5575" y="-1092"/>
         </scene>
         <!--Advisees-->
         <scene sceneID="jcT-lI-EXF">
@@ -562,7 +563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAB-j0-XWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3583" y="-1998"/>
+            <point key="canvasLocation" x="6370" y="-1370"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QkU-MV-Yi8">
@@ -618,7 +619,7 @@
             </objects>
             <point key="canvasLocation" x="3329" y="-229"/>
         </scene>
-        <!--Item-->
+        <!--Statistics-->
         <scene sceneID="shO-pv-Kes">
             <objects>
                 <viewController id="tm2-fR-t11" customClass="CourseViewController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -659,7 +660,7 @@
                             <constraint firstItem="4K7-eb-9WX" firstAttribute="leading" secondItem="ghb-9N-lic" secondAttribute="leading" constant="-65" id="beP-Bp-wc9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6HS-QD-IYG"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" id="6HS-QD-IYG"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="MLC-F5-e5V"/>
                     <connections>
                         <outlet property="noC" destination="ySd-sE-ZUB" id="uSq-en-W0O"/>
@@ -726,7 +727,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Im6-CL-Kwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="831.69642857142856"/>
+            <point key="canvasLocation" x="4680" y="-990"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="HJM-LR-wSk">
@@ -838,27 +839,12 @@
                         <outlet property="validationMassege" destination="IGk-tc-OFL" id="c6u-ME-5jV"/>
                         <outlet property="validationMessegepass" destination="Wrb-S3-GSV" id="dkJ-gy-4Ta"/>
                         <segue destination="UaJ-UI-gkK" kind="show" identifier="gotoStudents" id="Rax-hk-BYZ"/>
+                        <segue destination="zL5-RA-Fpi" kind="show" identifier="gotoLecturers" id="t2X-Hx-uMu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0L-ib-BR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2006" y="-912"/>
-        </scene>
-        <!--Statistics-->
-        <scene sceneID="RR7-gp-209">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ex2-Z8-7sO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Statistics" image="chart.bar.doc.horizontal.fill" catalog="system" id="yMd-pC-4Bo"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nli-g4-jpn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="whU-Ea-hND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bIG-MJ-fGN">
@@ -885,7 +871,6 @@
         <image name="Untitled_design__4__copy_3-removebg-preview-removebg-preview 2.png" width="176.84210205078125" height="150.73684692382812"/>
         <image name="Untitled_design__4__copy_3-removebg-preview.png" width="176.84210205078125" height="150.73684692382812"/>
         <image name="arrow.up.and.person.rectangle.portrait" catalog="system" width="128" height="100"/>
-        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
         <image name="checkmark.diamond.fill" catalog="system" width="128" height="122"/>
         <image name="doc.on.doc" catalog="system" width="116" height="128"/>
         <image name="livephoto" catalog="system" width="128" height="122"/>
