@@ -38,7 +38,8 @@ class loginController: UIViewController {
         validationMassege.isHidden = true   // not show
         validationMessegepass.isHidden = true
         
-        guard let email = emailTextfiled.text?.trimmingCharacters(in: .whitespaces) else {
+        guard let email = emailTextfiled.text?.trimmingCharacters(in: .whitespaces)
+        else {
             validationMassege.isHidden = false
             validationMassege.text = "please Enter your Email"
             return (false, "", "")
