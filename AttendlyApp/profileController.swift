@@ -13,9 +13,11 @@ class profileContoller: UIViewController {
 
 
 //
-    @IBAction func loUGout(_ sender: Any) {
+    //@IBAction func loUGout(_ sender: Any) {
 
-        print("logout!")
+    @IBAction func loUGout(_ sender: Any) {
+    
+    print("logout!")
 
         self.performSegue(withIdentifier: "logoo", sender: self)
 
