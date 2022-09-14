@@ -27,6 +27,7 @@ class CurrentVC: UIViewController {
             btn.layer.cornerRadius = btn.frame.height / 2
             btn.isHidden = true
             btn.alpha = 0
+            print("1")
         
     }
         getCourses()
@@ -45,7 +46,7 @@ class CurrentVC: UIViewController {
                 self?.addButtons(for: courses)
             }
         }
-    }
+        print("2")  }
     
     func addButtons(for courses: [String]) {
         buttonsStackView.isUserInteractionEnabled = true
@@ -62,9 +63,13 @@ class CurrentVC: UIViewController {
             button.backgroundColor = UIColor(red: 171/255, green: 193/255, blue: 198/255, alpha:1)
             button.setTitle(course, for: .normal)
             button.tag = index
+            let titleValueString = button.currentTitle!
+            print("VALUE OF SECTION **&^%$#@$$$$$$$$$")
+            print(titleValueString)
             button.addTarget(self, action: #selector(fetchStudentsFor(sender:)), for: .touchUpInside)
             button.layer.cornerRadius = 25
             button.isEnabled = true
+            print("3")
             buttonsStackView.addArrangedSubview(button)
         }
         
@@ -73,6 +78,9 @@ class CurrentVC: UIViewController {
     @objc func fetchStudentsFor(sender: UIButton) {
         let tag = sender.tag
         let course = courses[tag]
+     //   let titleValueString = button.currentTitle!
+        print("VALUE OF SECTION +++++++++++")
+        print(course)
         self.openCheckin(with: [], courseName: course)
 //        let db = Firestore.firestore()
 //        db.collection("studentsByCourse/\(course)/students").getDocuments {[weak self] snapshot, error in
@@ -88,13 +96,14 @@ class CurrentVC: UIViewController {
 //                students.append(student)
 //            }
 //        }
-    }
+        print("4")}
     
     func openCheckin(with students: [[String: Any]], courseName: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let checkinVC = storyboard.instantiateViewController(identifier: "CheckInVC") as! CheckInVC
         checkinVC.students = students
         checkinVC.courseName = courseName
+        print("5")
         self.show(checkinVC, sender: self)
     }
     
@@ -107,12 +116,12 @@ class CurrentVC: UIViewController {
             
         }
     }
-    }
+        print("6")  }
     @IBAction func butSection1(_ sender: UIButton) {
         if let btnLb1 = sender.titleLabel?.text{
             print(btnLb1)
             
-        }
+            print("7")  }
         
     }
     
