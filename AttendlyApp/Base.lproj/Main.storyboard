@@ -419,7 +419,7 @@
         <scene sceneID="yT9-P0-3d9">
             <objects>
                 <viewController id="CXZ-yL-87n" customClass="loginController" customModule="AttendlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="t1z-ha-0fr">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="t1z-ha-0fr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
